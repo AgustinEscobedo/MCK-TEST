@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css">
     <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.5.0/css/responsive.dataTables.min.css">
     <link rel="stylesheet" href="{{ asset('css/home.css') }}">
 </head>
 
@@ -59,6 +60,7 @@
     <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>
 
     <script>
         $(document).ready(function () {
@@ -97,6 +99,15 @@
                 ordering: true,
                 searching: true,
                 responsive: true,
+                responsive: {
+                    details: {
+                        type: 'column',  
+                        target: 'tr'     
+                    }
+                },
+                columnDefs: [
+                    { className: 'dtr-control', orderable: false, targets: 0 } 
+                ],
                 language: {
                     search: "_INPUT_",
                     searchPlaceholder: "Buscar..."
