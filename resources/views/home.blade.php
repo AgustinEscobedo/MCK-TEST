@@ -26,7 +26,7 @@
 
     <div class="container container-table mt-4">
         <h2 class="mb-4 text-center">Lista de Estados</h2>
-        <table id="estados-table" class="table table-striped table-hover">
+        <table id="estados-table" class="table table-striped table-hover dt-responsive nowrap" style="width:100%">
             <thead>
                 <tr>
                     <th>Nombre</th>
@@ -99,15 +99,6 @@
                 ordering: true,
                 searching: true,
                 responsive: true,
-                responsive: {
-                    details: {
-                        type: 'column',  
-                        target: 'tr'     
-                    }
-                },
-                columnDefs: [
-                    { className: 'dtr-control', orderable: false, targets: 0 } 
-                ],
                 language: {
                     search: "_INPUT_",
                     searchPlaceholder: "Buscar..."
